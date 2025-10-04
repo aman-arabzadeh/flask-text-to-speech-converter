@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <title>Speech Result</title>
+  </head>
+  <body>
+    <div class="container">
+      {% if message %}
+      <p class="message">{{ message }}</p>
+      {% endif %} {% if audio_file %}
+      <h3>Your Speech:</h3>
+      <audio controls autoplay>
+        <source
+          src="{{ url_for('static', filename=audio_file) }}"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+
+      <p>
+        <a href="{{ url_for('static', filename=audio_file) }}" download>
+          ⬇ Download MP3
+        </a>
+      </p>
+
+      {% endif %}
+
+      <br />
+      <a href="{{ url_for('index') }}">⬅ Back to Home</a>
+    </div>
+  </body>
+</html>

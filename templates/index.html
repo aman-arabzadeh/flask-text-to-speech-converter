@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <title>Text To Speech Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Text To Speech Converter</h1>
+
+      <form method="POST" action="{{ url_for('generate_speech') }}">
+        <label for="text"><strong>Enter Text:</strong></label>
+        <textarea
+          id="text"
+          name="text"
+          rows="8"
+          cols="50"
+          placeholder="Enter text here..."
+          required
+          autofocus
+        ></textarea>
+        <br />
+        <label for="language"><strong>Select Language:</strong></label>
+        <select name="language" id="language" required>
+          {% for lang_code, lang_name in languages.items() %}
+          <option value="{{ lang_code }}">{{ lang_name }}</option>
+          {% endfor %}
+        </select>
+        <br /><br />
+        <button type="submit">Convert to Speech</button>
+      </form>
+    </div>
+  </body>
+</html>

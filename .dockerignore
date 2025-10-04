@@ -1,0 +1,8 @@
+
+dist/
+build/
+*.spec
+LICENSE
+README*.md
+images/
+languages.py
