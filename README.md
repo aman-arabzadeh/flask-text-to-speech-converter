@@ -47,7 +47,18 @@ You can pull the image from **Docker Hub** and run it instantly on your own syst
 **Docker Hub Repository:**  
 [flask-web-gtts-app](https://hub.docker.com/repository/docker/amankoray/flask-web-gtts-app/general)
 
-### Run it in 2 simple steps
+# Run the Flask Web GTTs App
+
+### Run it in 3 Simple Steps
+
+Windows: Make sure Docker Desktop is running.  
+Install guide: [Install Docker Desktop on Windows](https://docs.docker.com/desktop/setup/install/windows-install/)  
+
+Linux: Make sure Docker is installed.  
+Guide: [Install Docker Engine on Linux](https://docs.docker.com/engine/install/ubuntu/)  
+
+You can also use any container engine of your choice.  
+Docker is not strictly required, but it is simple and widely used.
 
 ```bash
 # 1. Pull the image from Docker Hub
@@ -55,20 +66,4 @@ docker pull amankoray/flask-web-gtts-app:v1.0
 
 # 2. Run the container
 docker run -p 5000:5000 amankoray/flask-web-gtts-app:v1.0
-```
-
-Then open your browser and visit:  
-[http://localhost:5000](http://localhost:5000)
-That’s it! You’ll have the **Text-to-Speech Web App** running in seconds on your machine
-
----
-
-## Useful Links
-
-- [Flask Documentation](https://flask.palletsprojects.com/en/stable/)
-- [gTTS (Google Text-to-Speech) on PyPI](https://pypi.org/project/gTTS/)
-- [Python Official Downloads](https://www.python.org/downloads/)
-- [List of Supported gTTS Languages](https://gtts.readthedocs.io/en/latest/module.html#available-languages)
-- [Flask (web_framework)](<https://en.wikipedia.org/wiki/Flask_(web_framework)>)
-
 ---
